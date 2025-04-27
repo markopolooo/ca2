@@ -1,0 +1,193 @@
+
+
+.nav-left {
+    justify-self: start;
+}
+
+.nav-center {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-right {
+    justify-self: end;
+    display: flex;
+    gap: 15px;
+}
+h1 {
+	 font-family: 'MyCustomFont', sans-serif;
+}
+
+.cave-entrance {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../assets/images/emptystage.jpg'); 
+    transition: background-image 1.5s ease;
+}
+
+
+.summoned-background .cave-entrance {
+    background-image: url('../assets/images/theband.jpeg');
+}
+
+
+.cave-entrance:before {
+    left: 0;
+    transform: rotate(45deg);
+}
+
+.cave-entrance:after {
+    right: 0;
+    transform: rotate(-45deg);
+}
+
+.cave-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.cave-banner h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.submit-btn {
+    padding: 8px 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #990000;
+    transform: scale(1.05);
+}
+
+.eldritchjs {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'MyCustomFont', sans-serif;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    animation: fadeInOut 3s ease-in-out infinite;
+}
+
+.cave-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.secret-content-box {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.secret-content-box:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.secret-content-box h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.explore-scrolls {
+    width: 40%;
+    height: 60px;
+    margin: 40px auto;
+    border: 1px solid #333;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: white;
+}
+
+.explore-scrolls:before, .explore-scrolls:after {
+    content: '';
+    position: absolute;
+    background-color: #ddd;
+    width: 1px;
+    height: 100px;
+}
+
+.explore-scrolls:before {
+    left: 10%;
+    transform: rotate(45deg);
+}
+
+.explore-scrolls:after {
+    right: 10%;
+    transform: rotate(-45deg);
+}
+
+.explore-scrolls h2 {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.secret-content-box:hover, .explore-scrolls:hover {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cave-banner h1 {
+        font-size: 24px;
+    }
+    
+    .explore-scrolls {
+        width: 100%;
+    }
+}
+
+.cave-entrance {
+    transition: background-image 1.5s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+.summoned-background .cave-entrance {
+    background-image: url('../assets/images/theband.jpeg');
+}
+
+.summoned-background .submit-btn {
+    background-color: #990000;
+}

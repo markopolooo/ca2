@@ -1,0 +1,294 @@
+@import url("music-styles.css");
+@import url("scroll-styles.css");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden; 
+    width: 100%;
+}
+
+header, .header {
+    background-color: #a89080; 
+    color: #231f26; 
+    width: 100%;
+}
+
+.content-wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 15px; 
+    width: 100%;
+}
+
+/* Global */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3b5998; 
+    color: #86ded9; 
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    color: aquamarine;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: #86ded9; 
+}
+
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #a89080; 
+    width: 100%;
+}
+
+.placeholder-image {
+    max-width: 100%; 
+    aspect-ratio: 1;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.placeholder-image::before, .placeholder-image::after {
+    content: '';
+    position: absolute;
+    background-color: #ddd;
+}
+
+.placeholder-image::before {
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: rotate(45deg);
+}
+
+.placeholder-image::after {
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: rotate(-45deg);
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px; 
+    width: 100%;
+}
+
+.nav-left {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-right {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-right button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 15px;
+    width: 100%;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero-content h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #E0E0E0;
+}
+
+.hero-image {
+    width: 40%;
+    max-width: 100%; 
+}
+
+.buy-button {
+    padding: 8px 20px;
+    border: 1px solid #333;
+    background: white;
+    cursor: pointer;
+}
+
+/* Album Formats */
+.formats-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+}
+
+.format {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Live Dates */
+.live-dates {
+    text-align: center;
+    width: 100%;
+}
+
+.view-dates-button {
+    padding: 8px 20px;
+    border: 1px solid #333;
+    background: white;
+    cursor: pointer;
+}
+
+/* Store */
+.store-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+}
+
+.store-item {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Mailing List */
+.mailing-list {
+    text-align: center;
+    width: 100%;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.signup-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.submit-button {
+    padding: 8px 20px;
+    border: 1px solid #333;
+    background: white;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .hero-content, .hero-image {
+        width: 100%;
+    }
+    
+    .formats-container, .store-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .format, .store-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../assets/fonts/EldritchVanguard-Bold.otf') format('truetype');
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+
+
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/images/fog.gif'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3; 
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+main, header, nav, .cave-content, .cave-banner {
+    position: relative;
+    z-index: 1;
+}
+
+
+.cave-banner h1, .cave-banner button, nav a, .secret-content-box h2 {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.secret-content-box {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dropdown-content {
+    background-color: rgba(249, 249, 249, 0.95);
+}
+

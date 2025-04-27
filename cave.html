@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cave - Eldritch Harmony</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cave-styles.css">
+</head>
+<body class="cave-page">
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="store.html">Store</a>
+                <a href="live.html">Live</a>
+                <a href="music.html">Music</a>
+            </div>
+            <div class="nav-center">
+                <a href="index.html" class="logo">
+                  <img src = "assets/images/logo.png" width="50" height="50" alt="logo">
+                </a>
+            </div>
+           <div class="nav-right">
+                <a href="#" aria-label="TikTok"><img src="assets/images/tik-tok.png" width="20" height="20" alt="tik tok"> </a>
+                <a href="#" aria-label="YouTube"><img src="assets/images/youtube (1).png" width="20" height="20" alt="youtube"> </a>
+                <a href="#" aria-label="Twitter"><img src="assets/images/twitter-alt-circle.png" width="20" height="20" alt=" twitter"></a>
+                <a href="#" aria-label="Instagram"><img src="assets/images/instagram (2).png" width="20" height="20" alt="instagram"></a>
+                <a href="#" aria-label="Cart"><img src="assets/images/shopping-cart.png" width="20" height="20" alt="cart"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cave-entrance">
+			
+            <div class="cave-banner">
+                <h1>Welcome to the Cave.....</h1>
+                <button class="submit-btn">summon</button>
+            </div>
+            <div class="eldritchjs">ELDRITCHJS</div>
+        </section>
+
+        <section class="cave-content">
+            <div class="secret-content-box">
+                <h2>Unreleased Demos/Art</h2>
+            </div>
+
+            <div class="secret-content-box">
+                <h2>What are we listening to?</h2>
+            </div>
+
+            <div class="secret-content-box">
+                <h2>Downloadables</h2>
+            </div>
+
+            <div>
+				<h2>  <a href="thescroll.html" ><img src="assets/images/scroll.png" width="300" alt="scroll"></a> </h2>
+            </div>
+        </section>
+    </main>
+
+    <script>
+       document.querySelector('.submit-btn').addEventListener('click', function() {
+    document.body.classList.toggle('summoned-background');
+    
+    if (document.body.classList.contains('summoned-background')) {
+        this.textContent = 'banish';
+        alert('Your soul has been submitted to the eternal darkness...');
+    } else {
+        this.textContent = 'summon';
+        alert('You have returned to the light...');
+    }
+});
+    </script>
+</body>
+</html>
